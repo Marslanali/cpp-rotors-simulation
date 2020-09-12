@@ -1,5 +1,5 @@
-# Rotors UAV gazebo simualtions
-
+# RotorS 2d Navigation Branch 
+ 
 ```
 $ mkdir -p ~/catkin_ws/src
 $ cd ~/catkin_ws/src
@@ -7,7 +7,7 @@ $ catkin_init_workspace  # initialize your catkin workspace
 $ cd ~/catkin_ws/
 $ catkin init
 $ cd ~/catkin_ws/src
-$ git clone -b RotorS https://github.com/Marslanali/cpp-uav-simulations.git 
+$ git clone -b RotorS-Nav-2d https://github.com/Marslanali/cpp-uav-simulations.git 
 ```
 
 Build your workspace with python_catkin_tools (therefore you need python_catkin_tools)
