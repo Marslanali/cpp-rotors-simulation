@@ -11,9 +11,9 @@ RUN rm /bin/sh && ln -s /bin/bash /bin/sh
 
 RUN apt-get update && apt-get install -q -y ros-kinetic-catkin python-catkin-tools
 
-RUN apt-get update && apt-get install -q -y sudo apt install ros-kinetic-octomap-ros
+RUN apt-get update && apt-get install -q -y ros-kinetic-octomap-ros ros-kinetic-octomap ros-kinetic-octomap-mapping
 
-RUN  
+RUN 
 
 RUN
 
