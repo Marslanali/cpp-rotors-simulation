@@ -4,7 +4,6 @@ project(rotors_gazebo)
 add_definitions(-std=c++11)
 
 find_package(catkin REQUIRED COMPONENTS gazebo_msgs geometry_msgs mav_msgs roscpp sensor_msgs )
-
 catkin_package(
   CATKIN_DEPENDS
     gazebo_msgs
@@ -39,4 +38,8 @@ install(TARGETS waypoint_publisher waypoint_publisher_file hovering_example
   RUNTIME DESTINATION ${CATKIN_PACKAGE_BIN_DESTINATION}
 )
 
+
+find_package(octomap REQUIRED)
+include_directories(${OCTOMAP_INCLUDE_DIRS})
+link_libraries(${OCTOMAP_LIBRARIES})
 

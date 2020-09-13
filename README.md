@@ -32,7 +32,7 @@ $ source ~/.bashrc
 The OctoMap library is an open source library for generating volumetric 3D environment models from sensor data. This model data can then be used by a drone for navigation and obstacle avoidance.
 
 ```
-sudo apt-get install ros-indigo-octomap ros-indigo-octomap-mapping
+sudo apt-get install ros-kinetic-octomap ros-kinetic-octomap-mapping
 rosdep install octomap_mapping
 rosmake octomap_mapping
 ```

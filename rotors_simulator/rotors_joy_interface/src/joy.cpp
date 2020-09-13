@@ -10,7 +10,6 @@
  * You may obtain a copy of the License at
  *
  *     http://www.apache.org/licenses/LICENSE-2.0
-
  * Unless required by applicable law or agreed to in writing, software
  * distributed under the License is distributed on an "AS IS" BASIS,
  * WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
@@ -49,7 +48,7 @@ Joy::Joy() {
   pnh.param("max_roll", max_.roll, 10.0 * M_PI / 180.0);  // [rad]
   pnh.param("max_pitch", max_.pitch, 10.0 * M_PI / 180.0);  // [rad]
   pnh.param("max_yaw_rate", max_.rate_yaw, 45.0 * M_PI / 180.0);  // [rad/s]
-  pnh.param("max_thrust", max_.thrust, 30.0);  // [N]
+  pnh.param("max_thrust", max_.thrust, 16.0);  // [N]
 
   pnh.param("v_yaw_step", v_yaw_step_, 0.05);  // [rad/s]
 
