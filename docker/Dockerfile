@@ -11,12 +11,12 @@ RUN rm /bin/sh && ln -s /bin/bash /bin/sh
 
 RUN apt-get update && apt-get install -q -y ros-kinetic-catkin python-catkin-tools
 
-RUN apt-get update && apt-get install -q -y ros-kinetic-octomap-ros ros-kinetic-octomap-mapping
+RUN apt-get update && apt-get install -q -y ros-kinetic-octomap-ros \
+    ros-kinetic-octomap-mapping \
+    ros-kinetic-joy
 
 
-RUN apt-get install -q -y ros-kinetic-joy
- 
-
+# RUN apt-get install -q -y ros-kinetic-joy
 #   ros-kinetic-octomap ros-kinetic-octomap-mapping && \
 #   ros-kinetic-octomap-msgs ros-kinetic-octomap-ros && \
 #   ros-kinetic-octomap-rviz-plugins ros-kinetic-octomap-server
