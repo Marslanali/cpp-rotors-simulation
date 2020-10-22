@@ -118,3 +118,67 @@ Now you should see a part of the floor.
 
 In the Gazebo window, insert a cube in front of the red rotors and you should see it in Rviz.
 
+
+## Flexible Collision Library (FCL)
+FCL is MoveIt’s default collision checker, their official install instructions can be found here.
+
+```
+sudo apt -qq install libccd-dev
+```
+
+Clone the repo into your catkin workspace:
+
+```
+git clone https://github.com/flexible-collision-library/fcl
+cd fcl
+```
+Pick the correct version depending on the version of MoveIt you use:
+```
+git checkout fcl-0.5   # for kinetic
+git checkout master    # for melodic+
+```
+
+Next manually add a package.xml as used in the ROS release wrapper:
+```
+wget https://raw.githubusercontent.com/ros-gbp/fcl-release/debian/jade/fcl/package.xml
+```
+
+```
+mkdir build
+cd build
+cmake ..
+make
+sudo make all
+```
+## Open Motion Planning Library
+
+```
+sudo apt-get -y install ros-kinetic-ompl*
+
+```
+
+
+## Error
+
+```
+/usr/bin/ld: cannot find -loctomap
+/usr/bin/ld: cannot find -loctomath
+collect2: error: ld returned 1 exit status
+make[2]: *** [/home/arslan/catkin_ws/devel/.private/path_planning/lib/path_planning/old_path_planning] Error 1
+make[1]: *** [CMakeFiles/old_path_planning.dir/all] Error 2
+make[1]: *** Waiting for unfinished jobs....
+/usr/bin/ld: cannot find -loctomap
+/usr/bin/ld: cannot find -loctomath
+collect2: error: ld returned 1 exit status
+make[2]: *** [/home/arslan/catkin_ws/devel/.private/path_planning/lib/path_planning/path_planning_node] Error 1
+make[1]: *** [CMakeFiles/path_planning_node.dir/all] Error 2
+make: *** [all] Error 2
+
+```
+
+## Solution
+
+```
+sudo apt install liboctomap-dev
+
+```

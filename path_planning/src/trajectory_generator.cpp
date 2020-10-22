@@ -308,7 +308,7 @@ int main(int argc, char **argv)
 	ros::NodeHandle n;
 	ros::Subscriber planner_sub = n.subscribe("/waypoints",1,plannerCb);
 	vis_pub = n.advertise<visualization_msgs::Marker>( "visualization_marker_jerk", 0 );
-	traj_pub = n.advertise<trajectory_msgs::MultiDOFJointTrajectory>("/bebop2/command/trajectory",10);
+	traj_pub = n.advertise<trajectory_msgs::MultiDOFJointTrajectory>("/firefly/command/trajectory",10);
 	start_pub = n.advertise<geometry_msgs::PointStamped>("/start/clicked_point", 10);
 	ros::spin();
 }

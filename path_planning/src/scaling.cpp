@@ -119,7 +119,7 @@ int main(int argc, char **argv)
 	ros::Subscriber scale_sub = n.subscribe("/scaled/scale", 10, scaleCb);
 	// ros::Subscriber odom_sub = n.subscribe("/bebop2/odometry_sensor1/odometry", 10, odomCb);
 
-	message_filters::Subscriber<nav_msgs::Odometry> odom_sub(n, "/bebop2/odometry_sensor1/odometry", 1);
+	message_filters::Subscriber<nav_msgs::Odometry> odom_sub(n, "/firefly/odometry_sensor1/odometry", 1);
 	message_filters::Subscriber<svo_msgs::DenseInput> orb_sub(n, "/ORB/DenseInput", 1);
 	// message_filters::Subscriber<sensor_msgs::Image> img_sub(n, "/bebop/image_raw", 1);
 	typedef message_filters::sync_policies::ApproximateTime<nav_msgs::Odometry, svo_msgs::DenseInput> MySyncPolicy;
