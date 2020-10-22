@@ -1,4 +1,4 @@
-## RotorS UAV gazebo simualtions
+## RotorS UAV gazebo simulation
 
 This repository houses UAV RotorS simuation for analysis and development purposes. RotorS simulation framework is originallly developed at [Autonomous System Lab](https://hub.docker.com/r/osrf/subt-virtual-testbed), ETH Zurich. Please visit [RotorS here](https://hub.docker.com/r/osrf/subt-virtual-testbed) for main repository. 
 
