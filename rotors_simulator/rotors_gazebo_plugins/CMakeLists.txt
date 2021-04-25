@@ -1,4 +1,4 @@
-cmake_minimum_required(VERSION 2.8.3)
+cmake_minimum_required(VERSION 2.8.0)
 project(rotors_gazebo_plugins)
 
 set(MAVLINK_INTERFACE)
